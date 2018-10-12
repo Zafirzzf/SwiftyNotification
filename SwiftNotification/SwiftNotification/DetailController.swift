@@ -24,10 +24,11 @@ class DetailController: UIViewController {
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         view.addSubview(button)
         
-        NewNotifications.MarketChangeNoti(dispose: NotiDispose.always).addObserve { (result) in
+        NewNotifications.MarketChangeNoti().addObserve(.always) { (result) in
             print(result.name, result.age)
         }
-        NewNotifications.MarketChangeNoti(dispose: notiDispose).addObserve { (result) in
+        
+        NewNotifications.MarketChangeNoti().addObserve(notiDispose) { (result) in
             print(result.name, "3232" , result.age)
         }
     }

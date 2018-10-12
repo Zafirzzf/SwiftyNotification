@@ -11,13 +11,12 @@ import Foundation
 class NewNotifications {
     
     struct MarketChangeNoti: INewNotifioncation {
-        
         typealias InfoType = (name: String, age: Int)
-        var dispose: NotiDispose?
         var name: String = "marketChangeNoti"
+    }
     
-        init(dispose: NotiDispose? = nil) {
-            self.dispose = dispose
-        }
+    struct Finish: INewNotifioncation {
+        var name: String = "aaaaa"
+        typealias InfoType = ()
     }
 }

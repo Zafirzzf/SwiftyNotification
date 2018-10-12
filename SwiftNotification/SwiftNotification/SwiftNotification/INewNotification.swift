@@ -11,15 +11,10 @@ import Foundation
 protocol INewNotifioncation {
     associatedtype InfoType
     var name: String { get }
-    var dispose: NotiDispose? { get set }
-    init(dispose: NotiDispose?)
 }
 
 extension INewNotifioncation {
-    func addObserve(response: @escaping (InfoType) -> ()) {
-        guard let dispose = dispose else {
-            fatalError("Observer's dispose can't be nil")
-        }
+    func addObserve(_ dispose: NotiDispose, response: @escaping (InfoType) -> ()) {
         NewNotificationCenter.addObserve(dispose: dispose, name: name) { (object) in
             guard let info = object as? InfoType else { return }
             response(info)
