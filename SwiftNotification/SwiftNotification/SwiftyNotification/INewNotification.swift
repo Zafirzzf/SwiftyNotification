@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol INewNotifioncation {
+public protocol INewNotifioncation {
     associatedtype InfoType
     var name: String { get }
 }
 
-extension INewNotifioncation {
+public extension INewNotifioncation {
     func addObserve(_ dispose: NewNotiDispose, response: @escaping (InfoType) -> ()) {
         NewNotificationCenter.addObserve(dispose: dispose, name: name) { (object) in
             guard let info = object as? InfoType else { return }

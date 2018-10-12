@@ -31,14 +31,15 @@ class NewNotiHandler {
     }
 }
 
-class NewNotiDispose: Equatable {
-    static let always = NewNotiDispose()
+public class NewNotiDispose: Equatable {
+    public static let always = NewNotiDispose()
     deinit {
         NewNotificationCenter.newNotis.forEach { noti in
             noti.handlers.removeAll(where: { $0.notiDispose == nil })
         }
     }
-    static func == (lhs: NewNotiDispose, rhs: NewNotiDispose) -> Bool {
+    public init() { }
+    public static func == (lhs: NewNotiDispose, rhs: NewNotiDispose) -> Bool {
         return twoObjectAddressIsEqual(lhs, rhs)
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 class NewNotifications {
     
     struct MarketChangeNoti: INewNotifioncation {
@@ -20,3 +19,5 @@ class NewNotifications {
         typealias InfoType = ()
     }
 }
+
+

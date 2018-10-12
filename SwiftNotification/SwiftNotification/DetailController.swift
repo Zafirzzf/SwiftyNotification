@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class DetailController: UIViewController {
     deinit {
         print("详情页销毁")
