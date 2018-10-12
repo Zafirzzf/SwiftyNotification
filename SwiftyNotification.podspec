@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftyNotification"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "A new advance NotificationCenter by Swift."
 
   s.description  = <<-DESC
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "9.0"
     s.ios.deployment_target  = '9.0'
     s.swift_version = '4.0'
-    s.source       = { :git => "https://github.com/Zafirzzf/SwiftNotification.git", :tag => "1.1" }
-    s.source_files  = ""
+    s.source       = { :git => "https://github.com/Zafirzzf/SwiftNotification.git", :tag => "v1.2" }
+    s.source_files  = "Classes/*"
 
 end

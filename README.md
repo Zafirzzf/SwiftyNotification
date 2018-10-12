@@ -1,6 +1,13 @@
 # SwiftNotification
 A new advance NotificationCenter by Swift
 
+### CocoaPods
+
+```
+pod 'SwiftyNotification'
+
+```
+
  // Before:
 
 **Observer** 
