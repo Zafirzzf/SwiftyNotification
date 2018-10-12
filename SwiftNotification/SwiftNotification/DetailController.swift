@@ -13,7 +13,7 @@ class DetailController: UIViewController {
         print("详情页销毁")
     }
     
-    var notiDispose = NotiDispose()
+    var notiDispose = NewNotiDispose()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,11 @@ class DetailController: UIViewController {
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         view.addSubview(button)
         
+        addObserves()
+    }
+    
+    func addObserves() {
+
         NewNotifications.MarketChangeNoti().addObserve(.always) { (result) in
             print(result.name, result.age)
         }

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let noti = NotiDispose()
+    let noti = NewNotiDispose()
     
     override func viewDidLoad() {
         super.viewDidLoad()

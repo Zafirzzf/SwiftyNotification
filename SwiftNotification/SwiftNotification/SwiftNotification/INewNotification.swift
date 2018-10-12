@@ -14,7 +14,7 @@ protocol INewNotifioncation {
 }
 
 extension INewNotifioncation {
-    func addObserve(_ dispose: NotiDispose, response: @escaping (InfoType) -> ()) {
+    func addObserve(_ dispose: NewNotiDispose, response: @escaping (InfoType) -> ()) {
         NewNotificationCenter.addObserve(dispose: dispose, name: name) { (object) in
             guard let info = object as? InfoType else { return }
             response(info)

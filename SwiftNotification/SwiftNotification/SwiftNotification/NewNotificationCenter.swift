@@ -14,7 +14,7 @@ class NewNotificationCenter {
     
     static var newNotis = [NewNotification]()
     
-    static func addObserve(dispose: NotiDispose,
+    static func addObserve(dispose: NewNotiDispose,
                            name: String,
                            handler: @escaping NotiHandler) {
         

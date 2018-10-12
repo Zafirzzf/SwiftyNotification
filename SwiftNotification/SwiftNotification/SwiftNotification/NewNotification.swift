@@ -21,24 +21,24 @@ class NewNotification {
 
 class NewNotiHandler {
     
-    weak var notiDispose: NotiDispose?
+    weak var notiDispose: NewNotiDispose?
     var handler: NotiHandler
     
-    init(dispose: NotiDispose,
+    init(dispose: NewNotiDispose,
          handler: @escaping NotiHandler) {
         self.notiDispose = dispose
         self.handler = handler
     }
 }
 
-class NotiDispose: Equatable {
-    static let always = NotiDispose()
+class NewNotiDispose: Equatable {
+    static let always = NewNotiDispose()
     deinit {
         NewNotificationCenter.newNotis.forEach { noti in
             noti.handlers.removeAll(where: { $0.notiDispose == nil })
         }
     }
-    static func == (lhs: NotiDispose, rhs: NotiDispose) -> Bool {
+    static func == (lhs: NewNotiDispose, rhs: NewNotiDispose) -> Bool {
         return twoObjectAddressIsEqual(lhs, rhs)
     }
 }
