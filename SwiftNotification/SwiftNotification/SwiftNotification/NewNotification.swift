@@ -32,6 +32,7 @@ class NewNotiHandler {
 }
 
 class NotiDispose: Equatable {
+    static let always = NotiDispose()
     deinit {
         NewNotificationCenter.newNotis.forEach { noti in
             noti.handlers.removeAll(where: { $0.notiDispose == nil })

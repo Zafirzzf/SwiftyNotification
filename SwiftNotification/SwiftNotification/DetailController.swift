@@ -24,7 +24,7 @@ class DetailController: UIViewController {
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         view.addSubview(button)
         
-        NewNotifications.MarketChangeNoti(dispose: notiDispose).addObserve { (result) in
+        NewNotifications.MarketChangeNoti(dispose: NotiDispose.always).addObserve { (result) in
             print(result.name, result.age)
         }
         NewNotifications.MarketChangeNoti(dispose: notiDispose).addObserve { (result) in
