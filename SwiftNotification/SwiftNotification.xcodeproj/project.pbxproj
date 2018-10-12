@@ -10,10 +10,16 @@
 		18210936215DCFA4000CB844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210935215DCFA4000CB844 /* AppDelegate.swift */; };
 		18210938215DCFA4000CB844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210937215DCFA4000CB844 /* ViewController.swift */; };
 		1821093B215DCFA4000CB844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18210939215DCFA4000CB844 /* Main.storyboard */; };
-		1821093E215DCFA4000CB844 /* SwiftNotification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1821093C215DCFA4000CB844 /* SwiftNotification.xcdatamodeld */; };
 		18210940215DCFA6000CB844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1821093F215DCFA6000CB844 /* Assets.xcassets */; };
 		18210943215DCFA6000CB844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18210941215DCFA6000CB844 /* LaunchScreen.storyboard */; };
 		1821094E215DCFA7000CB844 /* SwiftNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1821094D215DCFA7000CB844 /* SwiftNotificationTests.swift */; };
+		1821095A215DD3A9000CB844 /* NewNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210959215DD3A9000CB844 /* NewNotificationCenter.swift */; };
+		1821095B215DD3A9000CB844 /* NewNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210959215DD3A9000CB844 /* NewNotificationCenter.swift */; };
+		18210BBF216F5DCC000CB844 /* INewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210BBE216F5DCC000CB844 /* INewNotification.swift */; };
+		18210BC1216F60BD000CB844 /* NewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210BC0216F60BD000CB844 /* NewNotification.swift */; };
+		18210BC3216F6324000CB844 /* NotificationsSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210BC2216F6324000CB844 /* NotificationsSets.swift */; };
+		18210BC521707002000CB844 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210BC421707002000CB844 /* DetailController.swift */; };
+		18210BC7217081AC000CB844 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18210BC6217081AC000CB844 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +37,18 @@
 		18210935215DCFA4000CB844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18210937215DCFA4000CB844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1821093A215DCFA4000CB844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1821093D215DCFA4000CB844 /* SwiftNotification.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftNotification.xcdatamodel; sourceTree = "<group>"; };
 		1821093F215DCFA6000CB844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18210942215DCFA6000CB844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18210944215DCFA6000CB844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18210949215DCFA7000CB844 /* SwiftNotificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNotificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1821094D215DCFA7000CB844 /* SwiftNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNotificationTests.swift; sourceTree = "<group>"; };
 		1821094F215DCFA7000CB844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18210959215DD3A9000CB844 /* NewNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotificationCenter.swift; sourceTree = "<group>"; };
+		18210BBE216F5DCC000CB844 /* INewNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INewNotification.swift; sourceTree = "<group>"; };
+		18210BC0216F60BD000CB844 /* NewNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNotification.swift; sourceTree = "<group>"; };
+		18210BC2216F6324000CB844 /* NotificationsSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSets.swift; sourceTree = "<group>"; };
+		18210BC421707002000CB844 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		18210BC6217081AC000CB844 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +90,16 @@
 		18210934215DCFA4000CB844 /* SwiftNotification */ = {
 			isa = PBXGroup;
 			children = (
+				18210958215DD23F000CB844 /* SwiftNotification */,
 				18210935215DCFA4000CB844 /* AppDelegate.swift */,
+				18210BC2216F6324000CB844 /* NotificationsSets.swift */,
 				18210937215DCFA4000CB844 /* ViewController.swift */,
+				18210BC421707002000CB844 /* DetailController.swift */,
+				18210BC6217081AC000CB844 /* ThirdViewController.swift */,
 				18210939215DCFA4000CB844 /* Main.storyboard */,
 				1821093F215DCFA6000CB844 /* Assets.xcassets */,
 				18210941215DCFA6000CB844 /* LaunchScreen.storyboard */,
 				18210944215DCFA6000CB844 /* Info.plist */,
-				1821093C215DCFA4000CB844 /* SwiftNotification.xcdatamodeld */,
 			);
 			path = SwiftNotification;
 			sourceTree = "<group>";
@@ -97,6 +111,16 @@
 				1821094F215DCFA7000CB844 /* Info.plist */,
 			);
 			path = SwiftNotificationTests;
+			sourceTree = "<group>";
+		};
+		18210958215DD23F000CB844 /* SwiftNotification */ = {
+			isa = PBXGroup;
+			children = (
+				18210959215DD3A9000CB844 /* NewNotificationCenter.swift */,
+				18210BC0216F60BD000CB844 /* NewNotification.swift */,
+				18210BBE216F5DCC000CB844 /* INewNotification.swift */,
+			);
+			path = SwiftNotification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821095A215DD3A9000CB844 /* NewNotificationCenter.swift in Sources */,
+				18210BC521707002000CB844 /* DetailController.swift in Sources */,
+				18210BBF216F5DCC000CB844 /* INewNotification.swift in Sources */,
 				18210938215DCFA4000CB844 /* ViewController.swift in Sources */,
-				1821093E215DCFA4000CB844 /* SwiftNotification.xcdatamodeld in Sources */,
+				18210BC3216F6324000CB844 /* NotificationsSets.swift in Sources */,
 				18210936215DCFA4000CB844 /* AppDelegate.swift in Sources */,
+				18210BC7217081AC000CB844 /* ThirdViewController.swift in Sources */,
+				18210BC1216F60BD000CB844 /* NewNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821095B215DD3A9000CB844 /* NewNotificationCenter.swift in Sources */,
 				1821094E215DCFA7000CB844 /* SwiftNotificationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,19 +495,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1821093C215DCFA4000CB844 /* SwiftNotification.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1821093D215DCFA4000CB844 /* SwiftNotification.xcdatamodel */,
-			);
-			currentVersion = 1821093D215DCFA4000CB844 /* SwiftNotification.xcdatamodel */;
-			path = SwiftNotification.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1821092A215DCFA4000CB844 /* Project object */;
 }

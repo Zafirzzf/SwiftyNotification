@@ -9,12 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let noti = NotiDispose()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .blue
+        
+        let button = UIButton(frame: CGRect(x: 30, y: 100, width: 50, height: 50))
+        button.backgroundColor = .red
+        button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+        view.addSubview(button)
     }
-
-
+    
+    @objc func buttonClick() {
+        NewNotifications.MarketChangeNoti().post((name: "zlll", age: 22))
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        navigationController?.pushViewController(DetailController(), animated: true)
+    }
 }
 
