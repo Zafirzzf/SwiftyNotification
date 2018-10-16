@@ -1,4 +1,4 @@
-# SwiftNotification
+# SwiftyNotification
 A new advance NotificationCenter by Swift
 
 ### CocoaPods
