@@ -48,7 +48,7 @@ You no longer need to guess what's the info in the notification
 ```
 struct MarketChangeNoti: INewNotifioncation {
     typealias InfoType = (name: String, age: Int)
-    var name: String = "marketChangeNoti"
+    static var name: String = "marketChangeNoti"
 }
 
 ```
@@ -56,10 +56,10 @@ struct MarketChangeNoti: INewNotifioncation {
 **Observer** 
 
 ```
-NewNotifications.MarketChangeNoti().addObserve(notiDispose, response: ((name: String, age: Int)) -> ())
+NewNotifications.MarketChangeNoti.addObserve(notiDispose, response: ((name: String, age: Int)) -> ())
 // info's type is a Tuple which contain String and Int, we also know the meaning of info
 
-MarketChangeNoti().addObserve(notiDispose) { (result) in
+MarketChangeNoti.addObserve(notiDispose) { (result) in
     print(result.name, "3232" , result.age)
 }
 ```
@@ -67,7 +67,7 @@ MarketChangeNoti().addObserve(notiDispose) { (result) in
 **Notification Poster**
 
 ```
-NewNotifications.MarketChangeNoti().post(info: (name: String, age: Int)
+NewNotifications.MarketChangeNoti.post(info: (name: String, age: Int)
 ```
 At a glance, the notification info need `name` and `age`
 
@@ -76,11 +76,11 @@ At a glance, the notification info need `name` and `age`
 ```
 var notiDispose = NewNotiDispose()
 
-NewNotifications.MarketChangeNoti().addObserve(notiDispose)
+NewNotifications.MarketChangeNoti.addObserve(notiDispose)
 
 ```
 or 
 
 ```
-NewNotifications.MarketChangeNoti().addObserve(.always)
+NewNotifications.MarketChangeNoti.addObserve(.always)
 ```
