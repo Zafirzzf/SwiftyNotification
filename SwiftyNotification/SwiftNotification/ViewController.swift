@@ -14,20 +14,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        
-        let button = UIButton(frame: CGRect(x: 30, y: 100, width: 50, height: 50))
-        button.backgroundColor = .red
-        button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
-        view.addSubview(button)
+        view.backgroundColor = .yellow
+    
     }
     
-    @objc func buttonClick() {
-        NewNotifications.MarketChangeNoti().post((name: "zlll", age: 22))
+    @IBAction func next(_ sender: UIButton) {
+         navigationController?.pushViewController(DetailController(), animated: true)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        navigationController?.pushViewController(DetailController(), animated: true)
+    @IBAction func postAction(_ sender: UIButton) {
+        print("发送通知name: zzf, age: 18")
+        NewNotifications.MarketChangeNoti.post(("zzf", 18))
     }
 }
 

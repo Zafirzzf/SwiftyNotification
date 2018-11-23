@@ -10,19 +10,19 @@ import Foundation
 
 public protocol INewNotifioncation {
     associatedtype InfoType
-    var name: String { get }
+    static var name: String { get }
 }
 
 public extension INewNotifioncation {
-    func addObserve(_ dispose: NewNotiDispose, response: @escaping (InfoType) -> ()) {
-        NewNotificationCenter.addObserve(dispose: dispose, name: name) { (object) in
+    static func addObserve(_ dispose: NewNotiDispose, response: @escaping (InfoType) -> ()) {
+        NewNotificationCenter.addObserve(dispose: dispose, name: Self.name) { (object) in
             guard let info = object as? InfoType else { return }
             response(info)
         }
     }
     
-    func post(_ info: InfoType) {
-        NewNotificationCenter.postNotification(name: name, info: info as AnyObject)
+    static func post(_ info: InfoType) {
+        NewNotificationCenter.postNotification(name: Self.name, info: info as AnyObject)
     }
 }
 

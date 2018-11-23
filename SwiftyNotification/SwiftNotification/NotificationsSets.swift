@@ -11,12 +11,17 @@ class NewNotifications {
     
     struct MarketChangeNoti: INewNotifioncation {
         typealias InfoType = (name: String, age: Int)
-        var name: String = "marketChangeNoti"
+        static var name: String = "marketChangeNoti"
     }
     
     struct Finish: INewNotifioncation {
-        var name: String = "aaaaa"
+        static var name: String = "aaaaa"
         typealias InfoType = ()
+    }
+    
+    struct FavoriteChange: INewNotifioncation {
+        static var name: String = "favoriteChange"
+        typealias InfoType = (Bool, String)
     }
 }
 

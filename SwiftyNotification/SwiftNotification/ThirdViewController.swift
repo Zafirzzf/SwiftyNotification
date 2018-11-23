@@ -14,10 +14,15 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .purple
+        let button = UIButton(frame: CGRect(x: 30, y: 100, width: 100, height: 50))
+        button.backgroundColor = .black
+        button.setTitle("发送通知", for: .normal)
+        button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+        view.addSubview(button)
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        NewNotifications.MarketChangeNoti().post((name: "zll", age: 16))
+    @objc func buttonClick() {
+        print("发送通知: name: zll, age: 16")
+        NewNotifications.MarketChangeNoti.post((name: "zll", age: 16))
     }
-
 }
